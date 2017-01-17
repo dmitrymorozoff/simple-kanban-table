@@ -19,7 +19,7 @@ body, html {
 #board {
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 85%;
     margin: 30px auto;
     flex-wrap: nowrap;
     padding: 20px;
@@ -170,16 +170,17 @@ input[type="checkbox"]+.checkbox-label:empty:before {
     right: 0;
     top: 50%;
     background-color: #fff;
-    width: 600px;
+    width: 380px;
     height: 400px;
     border-radius: 4px;
     text-align: center;
-    padding: 25px;
+    padding: 30px;
     opacity: 0;
     overflow-y: auto;
     visibility: hidden;
-    margin-top: -200px;
+    margin-top: -220px;
     backface-visibility: hidden;
+    box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.1);
     transform: scale(1.2);
     transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
 }
@@ -200,7 +201,14 @@ input[type="checkbox"]+.checkbox-label:empty:before {
     height: 1.75em;
 }
 
+.close-card {
+    opacity: 0;
+    margin-left: 8px;
+    transition: .2s;
+}
+
 .modal .modal-content {
+    width: 100%;
     opacity: 0;
     backface-visibility: hidden;
     transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
@@ -221,3 +229,54 @@ input[type="checkbox"]+.checkbox-label:empty:before {
     transform: translateY(10px);
     opacity: 1;
 }
+
+.modal-input {
+    width: 95%;
+    height: 30px;
+    margin-bottom: 3%;
+    border-radius: 5px;
+    border: 1px solid #d2d3d3;
+    font-size: 16px;
+    color: #333;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.modal-textarea {
+    border-radius: 5px;
+    width: 95%;
+    border: 1px solid #d2d3d3;
+    font-size: 16px;
+    color: #333;
+    padding: 10px;
+    height: 150px;
+    margin-bottom: 3%;
+    resize: none;
+      font-family: 'Open Sans', sans-serif;
+}
+
+.modal-label {
+    margin-left: auto;
+    display: block;
+    color: #d2d3d3;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+[data-priority='high'] {
+    border-left: 5px solid #e80033;
+    background: rgba(232, 0, 51, 0.05);
+}
+
+[data-priority='low'] {
+    border-left: 5px solid #05cc47;
+    background: rgba(5, 204, 71, 0.05);
+}
+
+[data-priority='medium'] {
+    border-left: 5px solid #febd17;
+    background: rgba(254, 189, 23, 0.05);
+}
+
+medium
